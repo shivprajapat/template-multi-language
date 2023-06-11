@@ -1,7 +1,7 @@
 import React from "react";
-import Language from "./language";
 import { FormattedMessage } from "react-intl";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import Language from "./language";
 
 const Header = () => {
   return (
@@ -10,20 +10,17 @@ const Header = () => {
         <Navbar.Brand href="#home">
           <FormattedMessage id="logo" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav>
-            <Nav.Link href="#home">
-              <FormattedMessage id="home" />
-            </Nav.Link>
-            <Nav.Link href="#link">
-              <FormattedMessage id="about" />
-            </Nav.Link>
-            <Nav.Link>
-              <Language />
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
+        <Nav className="gap-2 flex-row">
+          <Nav.Link href="#home">
+            <FormattedMessage id="home" />
+          </Nav.Link>
+          <Nav.Link href="#about">
+            <FormattedMessage id="about" />
+          </Nav.Link>
+          <Nav.Link>
+            <Language />
+          </Nav.Link>
+        </Nav>
       </Container>
     </Navbar>
   );
